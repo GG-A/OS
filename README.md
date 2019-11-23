@@ -3,4 +3,4 @@
 
 ## JDK版本
 
-- OpenJDK 11
+项目使用的JDK版本：**OpenJDK 11**
