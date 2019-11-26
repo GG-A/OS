@@ -16,6 +16,8 @@
 package com.github.gg_a.os;
 
 
+import java.io.File;
+
 /**
  * @author GG
  * @version 0.0.1
@@ -31,6 +33,11 @@ public final class OS {
     public static final String USER_TIMEZONE = getProperty("user.timezone");
 
     public static final String AWT_TOOLKIT_CLASSNAME = getProperty("awt.toolkit");
+
+    public static final String LINE_SEPARATOR = System.lineSeparator();
+    public static final String FILE_SEPARATOR = File.separator;
+    public static final String PATH_SEPARATOR = File.pathSeparator;
+
 
     /*
      * Mac操作系统版本参考以下网址 （Mac OS version refer to the following website）：
