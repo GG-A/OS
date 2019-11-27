@@ -7,16 +7,18 @@ OpenJDK 11
 
 ## 集成方式
 ### Maven
-```
+```xml
 <dependency>
   <groupId>com.github.GG-A</groupId>
   <artifactId>os</artifactId>
-  <version>0.0.1-RC1</version>
+  <version>0.0.1</version>
 </dependency>
 ```
 
 ### Gradle
-`implementation 'com.github.GG-A:os:0.0.1-RC1'`
+```
+implementation 'com.github.GG-A:os:0.0.1'
+```
 
 ## Copyright
 
