@@ -19,23 +19,72 @@ package com.github.gg_a.os;
 import java.io.File;
 
 /**
+ * OS util for getting system info. <br>
+ * 获取操作系统信息类
  * @author GG
  * @version 0.0.1
  */
 public final class OS {
+    /**
+     * Operating System name. <br>
+     * 操作系统名称
+     */
     public static final String OS_NAME = getProperty("os.name");
-    private static final String os = OS_NAME.toLowerCase();
+    private static final String os = OS_NAME == null ? "" : OS_NAME.toLowerCase();
+    /**
+     * Operating System version. <br>
+     * 操作系统版本号
+     */
     public static final String OS_VERSION = getProperty("os.version");
+    /**
+     * Operating System architecture. <br>
+     * 操作系统架构
+     */
     public static final String OS_ARCH = getProperty("os.arch");
 
+    /**
+     * User Home folder. <br>
+     * 用户home目录
+     */
     public static final String USER_HOME = getProperty("user.home");
+    /**
+     * User Language. <br>
+     * 当前用户使用的语言
+     */
     public static final String USER_LANGUAGE = getProperty("user.language");
+    /**
+     * User Timezone. <br>
+     * 当前用户使用的时区
+     */
     public static final String USER_TIMEZONE = getProperty("user.timezone");
 
+    /**
+     * The system-dependent Awt Toolkit class name. <br>
+     * 当前操作系统Awt Toolkit类名
+     */
     public static final String AWT_TOOLKIT_CLASSNAME = getProperty("awt.toolkit");
 
+    /**
+     * The system-dependent line separator string. <br>
+     *
+     * <p>On UNIX systems, it returns {@code "\n"};  <br>
+     * on Microsoft Windows systems it returns {@code "\r\n"}.  <br> <br>
+     * 当前系统行分隔符。在UNIX系统是"\n"；在Windows系统中是"\r\n"
+     */
     public static final String LINE_SEPARATOR = System.lineSeparator();
+    /**
+     * The system-dependent default name-separator character.  <br>
+     * <p>On UNIX systems the value of this field is <code>'/'</code>; <br>
+     * on Microsoft Windows systems it is <code>'\\'</code>.  <br><br>
+     * 当前系统路径中文件夹层级分隔符。在UNIX系统中是'/'；在Windows系统中是'\\'
+     */
     public static final String FILE_SEPARATOR = File.separator;
+    /**
+     * The system-dependent path-separator character.  <br>
+     * <p>On UNIX systems, this character is <code>':'</code>;   <br>
+     * on Microsoft Windows systems it is <code>';'</code>.  <br><br>
+     * 当前系统路径列表（路径与路径之间）的分隔符。在UNIX系统中是':'；在Windows系统中是';'
+     */
     public static final String PATH_SEPARATOR = File.pathSeparator;
 
 
@@ -60,9 +109,20 @@ public final class OS {
     public static final boolean IS_MAC_OS_X_JAGUAR = IS_PRE_MACOSX && macOSVerCompare("10.2");
     public static final boolean IS_MAC_OS_X_PUMA = IS_PRE_MACOSX && macOSVerCompare("10.1");
     public static final boolean IS_MAC_OS_X_CHEETAH = IS_PRE_MACOSX && macOSVerCompare("10.0");
-
+    /**
+     * The value is {@code true} if current Operating System is Mac. <br>
+     * 如果当前操作系统是Mac系统，那么值为true。
+     */
     public static final boolean IS_MAC = os.startsWith("mac os");
+    /**
+     * The value is {@code true} if current Operating System is "macOS". <br>
+     * 如果当前操作系统是macOS系统（2016年，"OS X"更名为"macOS"），那么值为true。
+     */
     public static final boolean IS_MACOS = IS_MACOS_SIERRA || IS_MACOS_HIGH_SIERRA || IS_MACOS_MOJAVE || IS_MACOS_CATALINA;
+    /**
+     * The value is {@code true} if current Operating System is "Mac OS X" or "OS X". <br>
+     * 如果当前操作系统是Mac OS X或OS X系统，那么值为true。
+     */
     public static final boolean IS_MAC_OS_X = IS_MAC_OS_X_CHEETAH || IS_MAC_OS_X_PUMA || IS_MAC_OS_X_JAGUAR || IS_MAC_OS_X_PANTHER
                                     || IS_MAC_OS_X_TIGER || IS_MAC_OS_X_LEOPARD || IS_MAC_OS_X_SNOW_LEOPARD || IS_MAC_OS_X_LION
                                     || IS_MAC_OS_X_MOUNTAIN_LION || IS_MAC_OS_X_MAVERICKS || IS_MAC_OS_X_YOSEMITE || IS_MAC_OS_X_EL_CAPITAN;
@@ -71,6 +131,10 @@ public final class OS {
     /*
      * windows版本参考以下网址（windows version refer to the following website）：
      * https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions
+     */
+    /**
+     * The value is {@code true} if current Operating System is Windows. <br>
+     * 如果当前操作系统是Windows系统，那么值为true。
      */
     public final static boolean IS_WINDOWS = os.startsWith("windows");
     public static final boolean IS_WINDOWS_10 = os.startsWith("windows 10");
@@ -91,6 +155,10 @@ public final class OS {
 
     /*
      * 其他常用操作系统（other commonly used Operating System）
+     */
+    /**
+     * The value is {@code true} if current Operating System is Linux. <br>
+     * 如果当前操作系统是Linux系统，那么值为true。
      */
     public static final boolean IS_LINUX = os.startsWith("linux");
     public static final boolean IS_FREEBSD = os.startsWith("freebsd");

@@ -6,7 +6,7 @@
 
     <groupId>com.github.GG-A</groupId>
     <artifactId>os</artifactId>
-    <version>0.0.1-RC1</version>
+    <version>0.0.1</version>
 
     <packaging>jar</packaging>
     <name>os</name>
