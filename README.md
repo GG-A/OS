@@ -1,23 +1,21 @@
 # OS
-基于 OpenJDK 11 获取操作系统信息的工具类（The Operating System utils for getting system info）
+获取操作系统信息的工具类（兼容Java 8及Java 9+）（The Operating System utils for getting system info）
 
-## JDK版本
 
-OpenJDK 11
 
-## 集成方式
+## 集成方式（兼容Java 8及Java 9+）
 ### Maven
 ```xml
 <dependency>
   <groupId>com.github.GG-A</groupId>
   <artifactId>os</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 
 ### Gradle
 ```
-implementation 'com.github.GG-A:os:0.0.1'
+implementation 'com.github.GG-A:os:0.0.2'
 ```
 
 ## Copyright
